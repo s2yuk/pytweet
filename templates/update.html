@@ -1,0 +1,30 @@
+{% extends 'layout_afterlogin.html' %}
+{% block head %}
+  <style>
+  </style>
+{% endblock %}
+{% block title %}
+  <title>Update</title>
+{% endblock %}
+{% block body %}
+
+<div class="container" id="container">
+  <div class="card w-50 mx-auto mt-5">
+      <div class="card-header">
+          <h3 class="text-monospace">Update registration</h3>
+
+      </div>
+      <div class="card-body">
+            <!--  update form -->
+          <form action="/update" method="post">
+              User name <input type="text" name="name" value="{{user.name}}" class="form-control mt-2">
+              Address <input type="text" name="address" value="{{user.address}}" class="form-control mt-2">
+              Number <input type="text" name="number" value="{{user.number}}" class="form-control mt-2">
+  
+              <input type="submit" value="Update User" class="btn btn-success btn-block mt-5">
+          
+          </form>
+      </div>
+  </div>
+</div>
+{% endblock %}

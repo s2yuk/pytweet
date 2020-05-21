@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Pytweet</title>
+{% endblock %}
+{% block head %}
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            font-style: oblique;
+            font-weight: bold;
+            }
+    </style>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <!-- nothing -->
+            </div>
+            <div class="col-lg-6">
+                <br><br><br>
+                <div class="card mt-5 w-75">
+                    <div class="card-header bg-white" id="index_welcome">
+                        <h1 class="text-primary">Pytweet</h1>
+                        <p class="text-success">Continue talking with your friends</p>
+                    </div>
+                    <div class="card-body mt-3">
+                        <a href="/signup" class="btn btn-primary btn-block">Sign up</a>
+                        <p class="text-center mt-2">or</p>
+                        <a href="/login" class="btn btn-success btn-block">Login</a>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+{% endblock %}
