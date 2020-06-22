@@ -1,25 +1,25 @@
 # pytweet 
 
 Thank you for watching my page.
-This is a small SNS application.
+This is a SNS application.
 
 ## environment 
- python /flask 
+ python /flask /phpMyAdmin
 
 ## Function 
-register / login,
-tweet (write) and upload photo,
-reply,
-Following / unfollow, 
-edit and delete tweet/reply, 
-good reaction (like), 
-search user.
+register / login, 
+tweet (write) and upload photo, 
+reply, 
+Following / unfollow,  
+edit and delete tweet/reply,  
+good reaction (like),  
+search user. 
 
 # ご覧いただきありがとうございます。
-pytweetは小さなSNSアプリケーションです。
+pytweetはSNSアプリケーションです。
 
 ## 環境
-python /flask を使用しています。
+python / flask / phpMyAdmin を使用しています。
 
 # 機能
  登録/ログイン、
