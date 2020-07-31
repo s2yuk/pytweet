@@ -1,6 +1,7 @@
 # pytweet 
 
 <video src="static/assets/Pytweet.mp4" controls autoplay width="400px" height="300px"></video>
+作動映像：https://www.awesomescreenshot.com/video/526276?key=6f061508d688602486f1817ec6cca756
 
 # ご覧いただきありがとうございます。
 pytweetはSNSアプリケーションです。
