@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: May 21, 2020 at 06:36 AM
--- Server version: 5.7.26
--- PHP Version: 7.3.8
+-- ホスト: localhost:8889
+-- 生成日時: 2020 年 7 月 13 日 05:38
+-- サーバのバージョン： 5.7.26
+-- PHP のバージョン: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `portfolio`
+-- データベース: `portfolio`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alembic_version`
+-- テーブルの構造 `alembic_version`
 --
 
 CREATE TABLE `alembic_version` (
@@ -31,7 +31,7 @@ CREATE TABLE `alembic_version` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `alembic_version`
+-- テーブルのデータのダンプ `alembic_version`
 --
 
 INSERT INTO `alembic_version` (`version_num`) VALUES
@@ -40,7 +40,7 @@ INSERT INTO `alembic_version` (`version_num`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `follow`
+-- テーブルの構造 `follow`
 --
 
 CREATE TABLE `follow` (
@@ -50,21 +50,24 @@ CREATE TABLE `follow` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `follow`
+-- テーブルのデータのダンプ `follow`
 --
 
 INSERT INTO `follow` (`id`, `source_user_id`, `target_user_id`) VALUES
-(11, 2, 1),
 (12, 1, 3),
 (15, 1, 4),
 (19, 2, 3),
 (20, 8, 1),
-(22, 6, 1);
+(22, 6, 1),
+(23, 1, 8),
+(24, 1, 2),
+(26, 4, 1),
+(27, 2, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `good`
+-- テーブルの構造 `good`
 --
 
 CREATE TABLE `good` (
@@ -75,7 +78,7 @@ CREATE TABLE `good` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `good`
+-- テーブルのデータのダンプ `good`
 --
 
 INSERT INTO `good` (`id`, `color`, `tweet_id`, `user_id`) VALUES
@@ -85,26 +88,14 @@ INSERT INTO `good` (`id`, `color`, `tweet_id`, `user_id`) VALUES
 (10, 'active', 50, 1),
 (11, 'active', 39, 1),
 (12, 'active', 47, 1),
-(14, 'active', 53, 1),
-(15, 'active', 55, 1),
-(16, 'active', 56, 1),
-(18, 'active', 57, 1),
-(22, 'active', 58, 2),
-(24, 'active', 56, 2),
-(25, 'active', 53, 2),
-(29, 'active', 58, 1),
-(31, 'active', 55, 2),
 (32, 'active', 39, 2),
-(33, 'active', 62, 2),
-(34, 'active', 61, 8),
-(35, 'active', 53, 8),
 (36, 'active', 74, 6),
-(37, 'active', 53, 6);
+(38, 'active', 75, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- テーブルの構造 `login`
 --
 
 CREATE TABLE `login` (
@@ -114,7 +105,7 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `login`
+-- テーブルのデータのダンプ `login`
 --
 
 INSERT INTO `login` (`id`, `login_name`, `password`) VALUES
@@ -130,7 +121,7 @@ INSERT INTO `login` (`id`, `login_name`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `profiles`
+-- テーブルの構造 `profiles`
 --
 
 CREATE TABLE `profiles` (
@@ -141,7 +132,7 @@ CREATE TABLE `profiles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `profiles`
+-- テーブルのデータのダンプ `profiles`
 --
 
 INSERT INTO `profiles` (`id`, `avatar`, `bio`, `user_id`) VALUES
@@ -155,7 +146,7 @@ INSERT INTO `profiles` (`id`, `avatar`, `bio`, `user_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `replys`
+-- テーブルの構造 `replys`
 --
 
 CREATE TABLE `replys` (
@@ -166,13 +157,10 @@ CREATE TABLE `replys` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `replys`
+-- テーブルのデータのダンプ `replys`
 --
 
 INSERT INTO `replys` (`id`, `comment`, `user_id`, `tweet_id`) VALUES
-(1, 'test', 1, 2),
-(2, 'test', 1, 2),
-(3, 'me too', 1, 2),
 (4, 'hongkong reply', 1, 6),
 (5, 'kyoto reply2', 1, 7),
 (6, 'kyoto reply2', 1, 7),
@@ -203,19 +191,17 @@ INSERT INTO `replys` (`id`, `comment`, `user_id`, `tweet_id`) VALUES
 (34, 'hello yukaaa', 2, 39),
 (35, 'reply test', 3, 47),
 (36, 'this is test2 ', 3, 39),
-(37, 'yukaaa comment', 1, 53),
-(38, 'test2 comment', 3, 53),
-(40, 'bonjour', 2, 61),
 (48, 'nice coat!', 2, 51),
-(49, 'test', 2, 39),
 (56, 'nice pic!', 8, 15),
 (57, 'reply test', 6, 74),
-(58, 'bonjour', 6, 61);
+(59, 'reply test', 1, 75),
+(60, 'reply test', 1, 75),
+(61, 'Welcome to pytweet!', 4, 39);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tweets`
+-- テーブルの構造 `tweets`
 --
 
 CREATE TABLE `tweets` (
@@ -227,12 +213,10 @@ CREATE TABLE `tweets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tweets`
+-- テーブルのデータのダンプ `tweets`
 --
 
 INSERT INTO `tweets` (`id`, `word`, `photo`, `user_id`, `good_count`) VALUES
-(2, 'want to go to Barcelona', '', 1, NULL),
-(3, 'kyoto', '', 1, NULL),
 (4, 'hello :)', '', 1, NULL),
 (6, 'hello ', 'hong-kong1.jpg', 1, NULL),
 (7, 'kyoto', 'kyoto3.jpeg', 1, NULL),
@@ -243,7 +227,7 @@ INSERT INTO `tweets` (`id`, `word`, `photo`, `user_id`, `good_count`) VALUES
 (12, 'what\'s up dude?', 'japan-tokyo-imperial-palace.jpg', 1, NULL),
 (13, 'hello tenga !', 'blank-profile-picture.png', 5, NULL),
 (14, 'hello :)', 'japan-tokyo-asakusa-senso-ji-temple.jpg', 2, NULL),
-(15, 'test', 'kyoto1.jpg', 1, NULL),
+(15, 'Beautiful place !', 'kyoto1.jpg', 1, NULL),
 (16, 'what\'s up?', 'barcelona2.jpeg', 1, NULL),
 (17, 'what\'s up?', 'taipei4.jpg', 1, NULL),
 (19, 'hello world', NULL, 1, NULL),
@@ -251,25 +235,20 @@ INSERT INTO `tweets` (`id`, `word`, `photo`, `user_id`, `good_count`) VALUES
 (36, 'with photo update', 'boot.jpg', 1, NULL),
 (37, 'update test', 'boot2.jpg', 1, NULL),
 (38, 'hello world', NULL, 3, NULL),
-(39, 'hello', NULL, 1, NULL),
+(39, 'hello :)', NULL, 1, NULL),
 (47, 'test tweet', NULL, 2, 0),
 (50, 'test 2 post ', NULL, 3, 0),
 (51, 'test2 post with photo', 'trench.jpg', 3, 0),
-(53, 'with photo', 'trouser.jpeg', 1, 1),
-(55, 'good test', NULL, 1, 0),
-(56, 'ttt', NULL, 1, 0),
-(57, '5555', NULL, 1, 0),
-(58, 'www', NULL, 1, 0),
-(61, 'hello', NULL, 1, 0),
 (62, 'Hello ! I\'m test.', NULL, 2, 0),
 (71, 'hello :)', 'roma3.jpeg', 8, 0),
 (72, '', 'new-york-city-statue-of-liberty.jpg', 8, 0),
-(74, 'hello :)', 'tokyo1.jpeg', 6, 0);
+(74, 'hello :)', 'tokyo1.jpeg', 6, 0),
+(75, 'hello :)', NULL, 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- テーブルの構造 `users`
 --
 
 CREATE TABLE `users` (
@@ -281,7 +260,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `users`
+-- テーブルのデータのダンプ `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `address`, `number`, `login_id`) VALUES
@@ -295,17 +274,17 @@ INSERT INTO `users` (`id`, `name`, `address`, `number`, `login_id`) VALUES
 (8, 'testuser', 'address', '020202020', 8);
 
 --
--- Indexes for dumped tables
+-- ダンプしたテーブルのインデックス
 --
 
 --
--- Indexes for table `alembic_version`
+-- テーブルのインデックス `alembic_version`
 --
 ALTER TABLE `alembic_version`
   ADD PRIMARY KEY (`version_num`);
 
 --
--- Indexes for table `follow`
+-- テーブルのインデックス `follow`
 --
 ALTER TABLE `follow`
   ADD PRIMARY KEY (`id`),
@@ -313,7 +292,7 @@ ALTER TABLE `follow`
   ADD KEY `source_user_id` (`source_user_id`);
 
 --
--- Indexes for table `good`
+-- テーブルのインデックス `good`
 --
 ALTER TABLE `good`
   ADD PRIMARY KEY (`id`),
@@ -321,20 +300,20 @@ ALTER TABLE `good`
   ADD KEY `tweet_id` (`tweet_id`);
 
 --
--- Indexes for table `login`
+-- テーブルのインデックス `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `profiles`
+-- テーブルのインデックス `profiles`
 --
 ALTER TABLE `profiles`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `replys`
+-- テーブルのインデックス `replys`
 --
 ALTER TABLE `replys`
   ADD PRIMARY KEY (`id`),
@@ -342,104 +321,104 @@ ALTER TABLE `replys`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `tweets`
+-- テーブルのインデックス `tweets`
 --
 ALTER TABLE `tweets`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `users`
+-- テーブルのインデックス `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD KEY `login_id` (`login_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- ダンプしたテーブルのAUTO_INCREMENT
 --
 
 --
--- AUTO_INCREMENT for table `follow`
+-- テーブルのAUTO_INCREMENT `follow`
 --
 ALTER TABLE `follow`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `good`
+-- テーブルのAUTO_INCREMENT `good`
 --
 ALTER TABLE `good`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT for table `login`
+-- テーブルのAUTO_INCREMENT `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `profiles`
+-- テーブルのAUTO_INCREMENT `profiles`
 --
 ALTER TABLE `profiles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `replys`
+-- テーブルのAUTO_INCREMENT `replys`
 --
 ALTER TABLE `replys`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
--- AUTO_INCREMENT for table `tweets`
+-- テーブルのAUTO_INCREMENT `tweets`
 --
 ALTER TABLE `tweets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
--- AUTO_INCREMENT for table `users`
+-- テーブルのAUTO_INCREMENT `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- Constraints for dumped tables
+-- ダンプしたテーブルの制約
 --
 
 --
--- Constraints for table `follow`
+-- テーブルの制約 `follow`
 --
 ALTER TABLE `follow`
   ADD CONSTRAINT `follow_ibfk_1` FOREIGN KEY (`target_user_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `follow_ibfk_2` FOREIGN KEY (`source_user_id`) REFERENCES `login` (`id`);
 
 --
--- Constraints for table `good`
+-- テーブルの制約 `good`
 --
 ALTER TABLE `good`
   ADD CONSTRAINT `good_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `good_ibfk_2` FOREIGN KEY (`tweet_id`) REFERENCES `tweets` (`id`);
 
 --
--- Constraints for table `profiles`
+-- テーブルの制約 `profiles`
 --
 ALTER TABLE `profiles`
   ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `replys`
+-- テーブルの制約 `replys`
 --
 ALTER TABLE `replys`
   ADD CONSTRAINT `replys_ibfk_1` FOREIGN KEY (`tweet_id`) REFERENCES `tweets` (`id`),
   ADD CONSTRAINT `replys_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `tweets`
+-- テーブルの制約 `tweets`
 --
 ALTER TABLE `tweets`
   ADD CONSTRAINT `tweets_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `users`
+-- テーブルの制約 `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`login_id`) REFERENCES `login` (`id`);
