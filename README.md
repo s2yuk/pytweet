@@ -1,7 +1,8 @@
 # pytweet 
-<script>
-https://www.awesomescreenshot.com/video/526276?key=6f061508d688602486f1817ec6cca756
-</script>
+<video>
+ 
+<sorce src="https://www.awesomescreenshot.com/video/526276?key=6f061508d688602486f1817ec6cca756">
+</video>
 Thank you for watching my page.
 This is a SNS application.
 
