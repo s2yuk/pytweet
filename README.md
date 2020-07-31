@@ -1,6 +1,6 @@
 # pytweet 
-<video>
- <src="https://www.awesomescreenshot.com/video/526276?key=6f061508d688602486f1817ec6cca756">video
+<video controls autoplay width="320" height="240">
+ <source src="static/assets/Pytweet.mp4">
 </video>
 Thank you for watching my page.
 This is a SNS application.
