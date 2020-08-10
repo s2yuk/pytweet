@@ -1,12 +1,11 @@
 # pytweet 
-<video controls autoplay width="320" height="240">
- <source src="static/assets/Pytweet.mp4">
-</video>
+<video src="static/assets/Pytweet.mp4" controls autoplay width="400px" height="300px"></video>
 Thank you for watching my page.
 This is a SNS application.
 
 ## environment 
- python /flask /phpMyAdmin
+Python /flask /MySQL (phpMyAdmin）
+
 
 ## Function 
 register / login, 
