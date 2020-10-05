@@ -22,10 +22,6 @@ HTML/ CSS/ Python/ Flask/ MySQL(phpMyAdmin) を使用しています。
  ユーザー検索。
 
 
->>>>>>> d4690a699b544d61f9e1418ed345bfe14e3ab7a3
-Thank you for watching my page.
-This is a SNS application.
-
 ## environment 
 Python /flask /MySQL (phpMyAdmin）
 
